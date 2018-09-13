@@ -47,6 +47,7 @@ In the **"Create SAMLP Identity Provider"** connection window, enter the followi
 For example, if your users have an email domain of 'abc-example.com', you would enter that into this field. You can enter multiple email domains if needed.  If you leave this field blank, users with any email domain can use the IDP.
 - **Sign In URL:** Enter the **SAML SSO URL** that you obtained from the Identity Provider.
 - **Sign Out URL:** Enter the **SAML Logout URL** obtained from the Identity Provider.
+- **Issuer:** By providing the SAML issuer, Auth0 will enforce that the incoming tokens have issuer that matches the value provided here, if not set Auth0 won't check the issuer.
 - **Certificate:**  Click on the red **"UPLOAD CERTIFICATE"** button and select the `.pem` file you obtained from the Identity Provider.
 - **User Id Attribute**: The attribute in the SAML token that will be mapped to the `user_id` property in Auth0. If not set, then the `user_id` will be retrieved from the following (in listed order):
   - `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier`
